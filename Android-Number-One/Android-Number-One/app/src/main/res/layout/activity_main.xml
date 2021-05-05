@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ToggleButton
+        android:id="@+id/btn_achete"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textOff="A acheté"
+        android:textOn="Acheté"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guide"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <ImageButton
+        android:id="@+id/btn_web"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/btn_achete"
+        app:layout_constraintTop_toTopOf="@+id/btn_achete"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintWidth_percent="0.5"
+        app:srcCompat="@drawable/internet16"
+        tools:layout_editor_absoluteX="-9dp" />
+
+    <TextView
+        android:id="@+id/tv_article"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Pain au chocolat"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_prix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="1.0 €"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_article"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        style="@style/Base.Widget.AppCompat.RatingBar.Small"
+        android:text="Une viennoiserie au beurre et au chocolat"
+        app:layout_constraintTop_toBottomOf="@+id/tv_prix" />
+
+    <RatingBar
+        android:id="@+id/rating_article"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rating="4"
+        app:layout_constraintBottom_toTopOf="@id/tv_prix"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
